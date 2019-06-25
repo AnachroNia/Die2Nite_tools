@@ -10,7 +10,7 @@
 // @include     http://www.die2nite.com/*
 // @description:en updater thingie
 // @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/jquery.min.js
-// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/jquery-ui-min.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/jquery-ui.min.js
 // @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/Farbtastic.js
 // @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/appjs.js
 // @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/updateApps.js
