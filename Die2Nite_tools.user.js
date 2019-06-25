@@ -2,23 +2,23 @@
 
 // @name        Die2Nite tools
 // @version     1.0.12
-// @author      Rulesy - rjdown@gmail.com
-// @namespace   rulesy-die2nite
+// @author      Isaac - isaaclw@gmail.com
+// @namespace   isaaclw-die2nite-from-rulesy
 // @grant       GM_xmlhttpRequest
 // @grant       GM_getResourceText
 // @grant       GM_info
 // @include     http://www.die2nite.com/*
 // @description:en updater thingie
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js
-// @require     http://greasyfork.org/scripts/31200-farbtastic/code/Farbtastic.js?version=204642
-// @require     http://greasyfork.org/scripts/31199-app-js/code/appjs.js?version=204803
-// @require     http://greasyfork.org/scripts/31206-updateapps/code/updateApps.js?version=204854
-// @require     http://greasyfork.org/scripts/31205-scavengercountdown/code/scavengerCountdown.js?version=204647
-// @require     http://greasyfork.org/scripts/31202-flashingescortbutton/code/flashingEscortButton.js?version=204644
-// @require     http://greasyfork.org/scripts/31204-ghoulhungerpercentages/code/ghoulHungerPercentages.js?version=204646
-// @require 		http://greasyfork.org/scripts/31201-mod-devtools/code/mod_devtools.js?version=204643
-// @resource    style.css http://raw.githubusercontent.com/Miudod2n/die2nitestuff/master/style.css
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/jquery.min.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/jquery-ui-min.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/libs/Farbtastic.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/appjs.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/updateApps.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/scavengerCountdown.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/flashingEscortButton.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/ghoulHungerPercentages.js
+// @require     https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/apps/mod_devtools.js
+// @resource    style.css https://raw.githubusercontent.com/isaaclw/Die2Nite_tools/master/style.css
 // @description updater thingie
 
 // ==/UserScript==
