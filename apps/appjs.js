@@ -1,3 +1,5 @@
+/*global $,log,modules */
+
 var app = {
 
 	init: function() {
@@ -15,7 +17,7 @@ var app = {
 		}
 
 	},
-	
+
 	settings: {
 
 		init: function() {
@@ -53,24 +55,24 @@ var app = {
 				html += '<img height="16" width="16" alt="' + modules[module].name + '" src="' + modules[module].icon + '"> <span>' + modules[module].name + '</span><span class="tick"></li>';
 			}
 
-			html += '				</ul>\
-								</div> \
-								<div class="footer"></div> \
-							</div> \
-						</td> \
-						<td class="contentPanel"> \
-							<div class="block contentBlock"> \
-								<div class="header"></div> \
-								<div class="bg"> \
-									<div id="generic_section"></div> \
-								</div> \
-								<div class="footer"></div> \
-								<div class="clear"></div> \
-							</div> \
-						</td> \
-					</tr> \
-				</tbody> \
-			</table>';
+			html += ['				</ul>',
+			        '					</div> ',
+			        '					<div class="footer"></div> ',
+			        '				</div> ',
+			        '			</td> ',
+			        '			<td class="contentPanel"> ',
+			        '				<div class="block contentBlock"> ',
+			        '					<div class="header"></div> ',
+			        '					<div class="bg"> ',
+			        '						<div id="generic_section"></div> ',
+			        '					</div> ',
+			        '					<div class="footer"></div> ',
+			        '					<div class="clear"></div> ',
+			        '				</div> ',
+			        '			</td> ',
+			        '		</tr> ',
+			        '	</tbody> ',
+			        '</table>'].join('');
 
 			if ($('#gameLayout').hasClass('appsettings')) {
 				$('#gameLayout').replaceWith($(html));
@@ -204,7 +206,7 @@ var app = {
 				values = indexes;
 			}
 
-			var content  = '<select id="' + id + '">';
+			var content = '<select id="' + id + '">';
 
 			for (var i in indexes) {
 				var index = indexes[i];
@@ -250,5 +252,5 @@ var app = {
 		style.innerHTML = css;
 		$('head').append(style);
 	}
-	
+
 }

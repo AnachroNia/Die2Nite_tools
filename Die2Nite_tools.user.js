@@ -1,7 +1,8 @@
-// ==UserScript==
+/*global $,modules */
 
+// ==UserScript==
 // @name        Die2Nite tools
-// @version     1.0.12
+// @version     1.0.13
 // @author      Isaac - isaaclw@gmail.com
 // @namespace   isaaclw-die2nite-from-rulesy
 // @grant       GM_xmlhttpRequest
@@ -24,7 +25,7 @@
 // ==/UserScript==
 
 // @todo		names alone are not enough to identify some items. need to use images as well
-// @todo		add a reset button to the flashing escort button config page	
+// @todo		add a reset button to the flashing escort button config page
 // @todo		stop dtd updating when camped, because topology is unavailable but required
 delete modules.updateApps.externalApps.cartographer;
 delete modules.updateApps.externalApps.mapviewer;
@@ -41,33 +42,27 @@ window.log = function(data) {
 	}
 };
 
-var remoteCssUrl = 'http://raw.githubusercontent.com/Miudod2n/die2nitestuff/master/';
-
 // basic jquery mutation observer extension, fuck IE for now
 $.fn.domChange = function(callback) {
-		
 	var mutations;
 	var mutationObserver
 	var selector;
-	
 	app.mutationObservers = app.mutationObservers || {};
-	
 	selector = this.selector;
 
 	// kill any existing observers for this selector
 	if (app.mutationObservers[selector]) {
 		app.mutationObservers[selector].disconnect();
 	}
-	
 	mutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-	
+
 	app.mutationObservers[selector] = new mutationObserver(function() {
 		// run once, might need to make this a variable later...
 		this.disconnect();
 
 		callback();
 	});
-	
+
 	mutations = {
 		attributes: true,
 		characterData: true,
@@ -77,7 +72,7 @@ $.fn.domChange = function(callback) {
 	this.each(function() {
 		app.mutationObservers[selector].observe(this, mutations);
 	});
-	
+
 }
 
 // bootstrap
