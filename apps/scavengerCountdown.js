@@ -11,7 +11,30 @@ modules.scavengerCountdown = {
 	pages: 'outside',
 
 	init: function() {
-				
+         function dateformat(time, hourtype, showampm) {
+             var hours = time.getHours(),
+                 minutes = time.getMinutes(),
+                 ampm = '';
+
+             if (hourtype == '12') {
+                 if (showampm == 'true') {
+                     ampm = ' AM';
+                     if (hours > 12) {
+                         hours = hours - 12;
+                         ampm = ' PM';
+                     }
+                 } else {
+                     if (hours > 12) {
+                         hours = hours - 12;
+                     }
+                 }
+             }
+             if (minutes < 10) {
+                 minutes = '0' + minutes;
+             }
+             return hours + ':' + minutes + ampm;
+         }
+
 		if ($('#gcount').length != 0 && $('#gcount span').length == 0 && !$('#gcount').html().match(/-/)) {
 
 			var time = new Date();
@@ -24,7 +47,6 @@ modules.scavengerCountdown = {
 			var zone = localStorage.getItem('modules.scavengerCountdown.config.zone') || 'local';
 			var hourtype = localStorage.getItem('modules.scavengerCountdown.config.hourtype') || '24';
 			var showampm = localStorage.getItem('modules.scavengerCountdown.config.showampm') || 'true';
-			var format = (hourtype == '12') ? (showampm == 'true' ? '%I:%M:%S %p' : '%I:%M:%S') : '%H:%M:%S';
 
 			time.setSeconds(time.getSeconds() + secondsLeft);
 
@@ -32,7 +54,7 @@ modules.scavengerCountdown = {
 				time.setSeconds(time.getSeconds() + modules.scavengerCountdown.serverTimeOffset);
 			}
 
-			$('#gcount').append(' <span>(' + unsafeWindow.DateTools.format(time, format) + ')</span>');
+			$('#gcount').append(' <span>(' + dateformat(time, hourtype, showampm) + ')</span>');
 		}
 
 		$('#gcount').domChange(function() {
