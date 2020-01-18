@@ -558,7 +558,7 @@ modules.updateApps = {
 			// ...
 			// }
 
-			url = 'http://die2nite.gamerz.org.uk/plugin/item-names-to-ids.json';
+			url = 'https://raw.githubusercontent.com/AnachroNia/Die2Nite_tools/master/item-names-to-ids.json';
 			//'file://C:\Die2Nite_tools\item-names-to-ids.json';
 
 			GM_xmlhttpRequest({
